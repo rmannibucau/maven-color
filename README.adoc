@@ -10,3 +10,29 @@ just replace $MAVEN_HOME/lib/slf4j-simple-*.jar with maven-color.jar. and add ja
 mvn clean install
 ----
 
+= Configuration
+
+Handled colors are configurable, here are the defaults (key and values):
+
+[===
+| Key | Value
+| org.slf4j.simpleLogger.color.TRACE | GREEN
+| org.slf4j.simpleLogger.color.DEBUG | GREEN
+| org.slf4j.simpleLogger.color.ERROR | RED
+| org.slf4j.simpleLogger.color.WARN | YELLOW
+| org.slf4j.simpleLogger.color.INFO | DEFAULT
+| org.slf4j.simpleLogger.color.INFO | DEFAULT
+| org.slf4j.simpleLogger.color.default | DEFAULT
+| org.slf4j.simpleLogger.color.build.success | GREEN
+| org.slf4j.simpleLogger.color.build.failed | RED
+| org.slf4j.simpleLogger.color.plugin | BLUE
+| org.slf4j.simpleLogger.color.separator | BLUE
+[===
+
+You need to edit ${maven.home}/conf/logging/simplelogger.properties file.
+
+= Sample
+
+image::screenshot.png[]
+
+
