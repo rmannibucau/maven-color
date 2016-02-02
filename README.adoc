@@ -36,3 +36,19 @@ You need to edit ${maven.home}/conf/logging/simplelogger.properties file.
 image::screenshot.png[]
 
 
+= Experimental
+
+The produced jar by maven build is executable and can setup maven:
+
+[source]
+----
+export MAVEN_HOME=...
+java -jar maven-color.jar
+----
+
+or
+
+[source]
+----
+java -jar maven-color.jar /path/to/maven/home
+----
