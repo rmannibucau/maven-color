@@ -1,0 +1,12 @@
+= Installation
+
+just replace $MAVEN_HOME/lib/slf4j-simple-*.jar with maven-color.jar.
+
+= Build
+
+
+[source]
+----
+mvn clean install
+----
+
