@@ -1,6 +1,6 @@
 = Installation
 
-just replace $MAVEN_HOME/lib/slf4j-simple-*.jar with maven-color.jar.
+just replace $MAVEN_HOME/lib/slf4j-simple-*.jar with maven-color.jar. and add jansi-1.11.jar in the same folder.
 
 = Build
 
