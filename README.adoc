@@ -31,6 +31,13 @@ Handled colors are configurable, here are the defaults (key and values):
 
 You need to edit ${maven.home}/conf/logging/simplelogger.properties file.
 
+= Skip colors
+
+For batch executions or when redirecting output, you can disable colors by setting property `maven.colors.skip` to true
+----
+MAVEN_OPTS="$MAVEN_OPTS -Dmaven.colors.skip=true" mvn compile
+----
+
 = Sample
 
 image::screenshot.png[]

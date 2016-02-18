@@ -46,7 +46,7 @@ import java.util.Properties;
 import static org.fusesource.jansi.Ansi.ansi;
 
 public class SimpleLogger extends MarkerIgnoringBase {
-
+    private static final boolean skipColors = Boolean.getBoolean("maven.colors.skip");
     private static final long serialVersionUID = -632788891211436180L;
     private static final String CONFIGURATION_FILE = "simplelogger.properties";
 
@@ -354,8 +354,13 @@ public class SimpleLogger extends MarkerIgnoringBase {
     }
 
     private void dump(Ansi.Color color, String line) {
-        TARGET_STREAM.println(ansi().fg(color).a(line).reset());
-        TARGET_STREAM.flush();
+        if (!skipColors) {
+            TARGET_STREAM.println(ansi().fg(color).a(line).reset());
+            TARGET_STREAM.flush();
+        } else {
+            TARGET_STREAM.println(line);
+            TARGET_STREAM.flush();
+        }
     }
 
     private String getFormattedDate() {
