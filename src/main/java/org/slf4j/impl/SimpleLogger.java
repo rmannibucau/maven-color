@@ -323,7 +323,7 @@ public class SimpleLogger extends MarkerIgnoringBase {
         if (t != null) {
             final ByteArrayOutputStream baos = new ByteArrayOutputStream();
             t.printStackTrace(new PrintStream(baos));
-            buf.append(System.getProperty("line.separator")).append(new String(buf));
+            buf.append(System.getProperty("line.separator")).append(new String(baos.toByteArray()));
         }
 
         write(level, buf.toString());
